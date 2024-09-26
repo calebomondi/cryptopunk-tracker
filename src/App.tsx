@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import Assign from './components/assign/assign';
 import Notonsale from './components/notonsale/notonsale';
 import Onsale from './components/onsale/onsale';
