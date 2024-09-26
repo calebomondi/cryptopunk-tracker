@@ -18,7 +18,7 @@ function App() {
                 <ul>
                     <li>
                     <NavLink 
-                        to="/cryptopunk-tracker" 
+                        to="/" 
                         end 
                         className={({ isActive }) => isActive ? 'active-link' : ''}
                     >
