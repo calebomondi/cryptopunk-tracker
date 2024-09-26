@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
 import { gql, request } from 'graphql-request';
-import React from 'react';
+
+interface AssignProps {
+    punkIndex: string;
+    fromAddress: string;
+    toAddress: string;
+    value: string;
+    transactionHash: string;
+    blockTimestamp: string;
+}
+
 
 export default function Sold() {
-    const [data, setData] = useState(null);
-
-    interface AssignProps {
-        punkIndex: string;
-        fromAddress: string;
-        toAddress: string;
-        value: string;
-        transactionHash: string;
-        blockTimestamp: string;
-    }
+    const [data, setData] = useState<AssignProps[] | null>(null);
 
     const query = gql`
     {

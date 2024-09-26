@@ -1,15 +1,15 @@
-import React from 'react'
 import { useEffect, useState } from 'react';
 import { gql, request } from 'graphql-request';
 
-function Notonsale() {
-  const [data, setData] = useState(null);
+interface AssignProps {
+    punkIndex: string;
+    transactionHash: string;
+    blockTimestamp: string;
+}
 
-    interface AssignProps {
-        punkIndex: string;
-        transactionHash: string;
-        blockTimestamp: string;
-    }
+function Notonsale() {
+    const [data, setData] = useState<AssignProps[] | null>(null);
+
 
     const query = gql`
     {
