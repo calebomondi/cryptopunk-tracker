@@ -1,0 +1,115 @@
+nav {
+  width: 100%;
+  background-color: #333; /* Background color of the nav */
+  padding: 10px; /* Padding around the nav */
+  margin: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display items in a row */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+nav li {
+  margin: 0 20px; /* Space between each link */
+  
+}
+
+nav a {
+  color: #0acff1; /* Link color */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 10px; /* Padding around links */
+  transition: border-bottom 0.3s; /* Smooth transition for underline effect */
+}
+
+/* Active link styles */
+nav a.active {
+  text-decoration: underline; /* Underline the active link */
+  font-weight: bold; /* Make active link bold */
+  color: yellow; /* Color for active link */
+}
+
+.Title-Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: lightgray;
+}
+
+.Title-Main img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 2px dashed #0acff1;
+}
+
+/*For components*/
+.assign-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items in a row */
+  gap: 10px; /* Spacing between boxes */
+  padding: 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+.assign-box {
+  background-color: gray;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 280px; /* Control max-width for boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.assign-box:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.details {
+  margin: 10px 0;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ellipse long text */
+  width: 100%;
+}
+
+/* Responsive design: fewer columns on smaller screens */
+@media (max-width: 1200px) {
+  .assign-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .assign-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .assign-container {
+      grid-template-columns: 1fr; /* 1 item per row on small screens */
+  }
+}
+
+strong {
+  color: black;
+}
+
+/**/
+.active-link {
+  color: orange;
+}
