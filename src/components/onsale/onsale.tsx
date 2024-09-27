@@ -54,7 +54,7 @@ export default function Onsale() {
                     ))}
                 </div>
             ) : (
-                <div>Loading...</div>
+                <div className='load'>Loading...</div>
             )}
         </main>
     );

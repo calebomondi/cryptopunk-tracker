@@ -65,7 +65,7 @@ export default function Sold() {
                     ))}
                 </div>
             ) : (
-                <div>Loading...</div>
+                <div className='load'>Loading...</div>
             )}
         </main>
     );

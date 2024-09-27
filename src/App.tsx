@@ -18,7 +18,7 @@ function App() {
                 <ul>
                     <li>
                     <NavLink 
-                        to="/" 
+                        to="/cryptopunk-tracker/" 
                         end 
                         className={({ isActive }) => isActive ? 'active-link' : ''}
                     >
@@ -27,7 +27,7 @@ function App() {
                     </li>
                     <li>
                         <NavLink 
-                            to="/sold" 
+                            to="/cryptopunk-tracker/sold" 
                             end 
                             className={({ isActive }) => isActive ? 'active-link' : ''}
                         >
@@ -36,7 +36,7 @@ function App() {
                     </li>
                     <li>
                     <NavLink 
-                            to="/transferred" 
+                            to="/cryptopunk-tracker/transferred" 
                             end 
                             className={({ isActive }) => isActive ? 'active-link' : ''}
                         >
@@ -45,7 +45,7 @@ function App() {
                     </li>
                     <li>
                     <NavLink 
-                            to="/on-sale" 
+                            to="/cryptopunk-tracker/on-sale" 
                             end 
                             className={({ isActive }) => isActive ? 'active-link' : ''}
                         >
@@ -54,7 +54,7 @@ function App() {
                     </li>
                     <li>
                     <NavLink 
-                            to="/no-longer-on-sale" 
+                            to="/cryptopunk-tracker/no-longer-on-sale" 
                             end 
                             className={({ isActive }) => isActive ? 'active-link' : ''}
                         >
@@ -64,11 +64,11 @@ function App() {
                 </ul>
             </nav>
             <Routes>
-                <Route path="/" element={<Assign />} />
-                <Route path="/sold" element={<Sold />} />
-                <Route path="/transferred" element={<Transfer />} />
-                <Route path="/on-sale" element={<Onsale />} />
-                <Route path="/no-longer-on-sale" element={<Notonsale />} />
+                <Route path="/cryptopunk-tracker/" element={<Assign />} />
+                <Route path="/cryptopunk-tracker/sold" element={<Sold />} />
+                <Route path="/cryptopunk-tracker/transferred" element={<Transfer />} />
+                <Route path="/cryptopunk-tracker/on-sale" element={<Onsale />} />
+                <Route path="/cryptopunk-tracker/no-longer-on-sale" element={<Notonsale />} />
             </Routes>
         </Router>
     );

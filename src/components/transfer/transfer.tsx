@@ -60,7 +60,7 @@ export default function Transfer() {
                     ))}
                 </div>
             ) : (
-                <div>Loading...</div>
+                <div className='load'>Loading...</div>
             )}
         </main>
     );

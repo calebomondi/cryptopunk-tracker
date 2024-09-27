@@ -113,3 +113,10 @@ strong {
 .active-link {
   color: orange;
 }
+
+.load {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+}

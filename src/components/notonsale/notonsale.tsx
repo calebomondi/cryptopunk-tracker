@@ -50,7 +50,7 @@ function Notonsale() {
                     ))}
                 </div>
             ) : (
-                <div>Loading...</div>
+                <div className='load'>Loading...</div>
             )}
         </main>
     );
