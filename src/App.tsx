@@ -27,7 +27,7 @@ function App() {
         <Router>
             <div className="min-h-screen">
                 {/* Header */}
-                <div className="dark:bg-slate-800 bg-blue-100">
+                <div className={`dark:bg-slate-800 bg-blue-100`}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex justify-between md:justify-center items-center py-4">
                             {/* Logo and Title */}
