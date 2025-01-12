@@ -35,7 +35,7 @@ export default function Assign() {
     return (
         <main>
             {data ? (
-                <div className="assign-container grid md:grid-cols-4 gap-2">
+                <div className="grid md:grid-cols-4 gap-2">
                     {data.map((assign: AssignProps, index: number) => (
                         <div key={index} className=" bg-slate-900 p-2 rounded-lg hover:scale-105 hover:shadow-lg shadow-sm">
                             <p className="" title={assign.punkIndex}>
@@ -54,7 +54,7 @@ export default function Assign() {
                     ))}
                 </div>
             ) : (
-                <div className='grid place-items-center text-4xl font-semibold'>Loading...</div>
+                <div className='grid place-items-center text-2xl font-semibold text-blue-500'>Loading...</div>
             )}
         </main>
     );

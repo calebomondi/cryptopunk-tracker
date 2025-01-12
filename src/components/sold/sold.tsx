@@ -40,32 +40,32 @@ export default function Sold() {
     return (
         <main>
             {data ? (
-                <div className="assign-container">
+                <div className="grid md:grid-cols-4 gap-2">
                     {data.map((assign: AssignProps, index: number) => (
-                        <div key={index} className="assign-box">
-                            <p className="details" title={assign.punkIndex}>
+                        <div key={index} className="bg-slate-900 p-2 rounded-lg hover:scale-105 hover:shadow-lg shadow-sm">
+                            <p className="" title={assign.punkIndex}>
                                 <strong>PunkIndex:</strong> {assign.punkIndex}
                             </p>
-                            <p className="details" title={assign.fromAddress}>
-                                <strong>From:</strong> {assign.fromAddress}
+                            <p className="" title={assign.fromAddress}>
+                                <strong>From:</strong> {`${assign.fromAddress.slice(0,6)}...${assign.fromAddress.slice(-5)}`}
                             </p>
-                            <p className="details" title={assign.toAddress}>
-                                <strong>To:</strong> {assign.toAddress}
+                            <p className="" title={assign.toAddress}>
+                                <strong>To:</strong> {`${assign.toAddress.slice(0,6)}...${assign.toAddress.slice(-5)}`}
                             </p>
-                            <p className="details" title={assign.value}>
+                            <p className="" title={assign.value}>
                                 <strong>Value:</strong> {assign.value}
                             </p>
-                            <p className="details" title={assign.transactionHash}>
-                                <strong>Trans:</strong> {assign.transactionHash}
+                            <p className="" title={assign.transactionHash}>
+                                <strong>Trans:</strong> {`${assign.transactionHash.slice(0,6)}...${assign.transactionHash.slice(-5)}`}
                             </p>
-                            <p className="details" title={new Date(parseInt(assign.blockTimestamp) * 1000).toLocaleString()}>
+                            <p className="" title={new Date(parseInt(assign.blockTimestamp) * 1000).toLocaleString()}>
                                 <strong>Time:</strong> {new Date(parseInt(assign.blockTimestamp) * 1000).toLocaleString()}
                             </p>
                         </div>
                     ))}
                 </div>
             ) : (
-                <div className='load'>Loading...</div>
+                <div className='grid place-items-center text-2xl font-semibold text-blue-500'>Loading...</div>
             )}
         </main>
     );
