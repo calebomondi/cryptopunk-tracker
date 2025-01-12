@@ -25,15 +25,15 @@ function App() {
 
     return (
         <Router>
-            <div className="min-h-screen bg-gray-100">
+            <div className="min-h-screen">
                 {/* Header */}
-                <div className="bg-white shadow">
+                <div className="bg-white dark:bg-slate-800 shadow-xl">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex justify-between items-center py-4">
+                        <div className="flex justify-between md:justify-center items-center py-4">
                             {/* Logo and Title */}
                             <div className="flex items-center space-x-4">
-                                <img src={IMG} alt="CryptoPunk" className="h-10 w-10 md:h-12 md:w-12" />
-                                <h1 className="text-xl md:text-2xl font-bold text-gray-900">CryptoPunk Tracker</h1>
+                                <img src={IMG} alt="CryptoPunk" className="md:h-16 md:w-16 w-10  rounded-full border border-dashed border-blue-700" />
+                                <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-gray-300">CryptoPunk Tracker</h1>
                             </div>
 
                             {/* Mobile menu button */}
@@ -48,7 +48,7 @@ function App() {
                 </div>
 
                 {/* Navigation */}
-                <nav className="bg-white dark:bg-slate-900 shadow-sm">
+                <nav className="bg-white dark:bg-slate-900 shadow-sm top-0 left-0 sticky">
                     {/* Mobile Menu */}
                     <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
                         <div className="px-2 pt-2 pb-3 space-y-1">

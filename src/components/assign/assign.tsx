@@ -35,26 +35,26 @@ export default function Assign() {
     return (
         <main>
             {data ? (
-                <div className="assign-container">
+                <div className="assign-container grid md:grid-cols-4 gap-2">
                     {data.map((assign: AssignProps, index: number) => (
-                        <div key={index} className="assign-box">
-                            <p className="details" title={assign.punkIndex}>
+                        <div key={index} className=" bg-slate-900 p-2 rounded-lg hover:scale-105 hover:shadow-lg shadow-sm">
+                            <p className="" title={assign.punkIndex}>
                                 <strong>PunkIndex:</strong> {assign.punkIndex}
                             </p>
-                            <p className="details" title={assign.to}>
-                                <strong>To:</strong> {assign.to}
+                            <p className="" title={assign.to}>
+                                <strong>To:</strong> {`${assign.to.slice(0,6)}...${assign.to.slice(-5)}`}
                             </p>
-                            <p className="details" title={assign.transactionHash}>
-                                <strong>Trans:</strong> {assign.transactionHash}
+                            <p className="" title={assign.transactionHash}>
+                                <strong>Trans:</strong> {`${assign.transactionHash.slice(0,6)}...${assign.transactionHash.slice(-5)}`}
                             </p>
-                            <p className="details" title={new Date(parseInt(assign.blockTimestamp) * 1000).toLocaleString()}>
+                            <p className="" title={new Date(parseInt(assign.blockTimestamp) * 1000).toLocaleString()}>
                                 <strong>Time:</strong> {new Date(parseInt(assign.blockTimestamp) * 1000).toLocaleString()}
                             </p>
                         </div>
                     ))}
                 </div>
             ) : (
-                <div className='load'>Loading...</div>
+                <div className='grid place-items-center text-4xl font-semibold'>Loading...</div>
             )}
         </main>
     );
