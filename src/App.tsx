@@ -27,7 +27,7 @@ function App() {
         <Router>
             <div className="min-h-screen">
                 {/* Header */}
-                <div className="dark:bg-slate-800" style={{backgroundColor:'#fff1e6'}}>
+                <div className="dark:bg-slate-800 bg-blue-100">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex justify-between md:justify-center items-center py-4">
                             {/* Logo and Title */}
@@ -48,7 +48,7 @@ function App() {
                 </div>
 
                 {/* Navigation */}
-                <nav className="dark:bg-slate-900 shadow-lg top-0 left-0 sticky m-1 rounded-lg" style={{backgroundColor:'#fff1e6'}}>
+                <nav className="dark:bg-slate-900 shadow-lg top-0 left-0 sticky m-1 rounded-lg bg-blue-100">
                     {/* Mobile Menu */}
                     <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
                         <div className="px-2 pt-2 pb-3 space-y-1">
