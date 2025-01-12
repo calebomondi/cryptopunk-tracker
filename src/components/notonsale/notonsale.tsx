@@ -36,7 +36,7 @@ function Notonsale() {
             {data ? (
                 <div className="grid md:grid-cols-4 gap-2">
                     {data.map((assign: AssignProps, index: number) => (
-                        <div key={index} className="bg-slate-900 p-2 rounded-lg hover:scale-105 hover:shadow-lg shadow-sm">
+                        <div key={index} className="dark:bg-slate-900 p-2 rounded-lg hover:scale-105 hover:shadow-lg shadow-lg">
                             <p className="" title={assign.punkIndex}>
                                 <strong>PunkIndex:</strong> {assign.punkIndex}
                             </p>
